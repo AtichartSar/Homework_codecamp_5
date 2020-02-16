@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="margin: 0 auto;">
+        <tr>
+            <th>link</th>
+            <th>อธิบาย</th>
+        </tr>
+        <tr>
+            <td><a target="black" href="https://www.bangkokpost.com/">www.ข่าว</a></td>
+            <td>เว็บข่าวมีการจัดเนื้อหาแบบทั้งคอลัมและแถว การใช้ display grid จึงเหมาสมที่สุด</td>
+        </tr>
+        <tr>
+            <td><a href="https://portal.weloveshopping.com/" target="_blank">www.ชอปปิ้ง</a></td>
+            <td>เว็บชอปปิ้งมีการจัดเนื้อหาแสดงสินค้าแบบตาราง การรใช้ display flex จึงเหมาะสมที่สุด</td>
+        </tr>
+    </table><br>
+    <table style=" width: 44%;margin: 0 auto;">
+        <tr>
+            <td>Tooltips </td>
+            <td>
+                <div class="tooltip">Hover over me
+                    <span class="tooltiptext">Tooltip text</span>
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Pagination</td>
+            <td>
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Navigatior bar</td>
+            <td>
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>dropdown</td>
+            <td>
+                <div class="dropdown">
+                    <span>Mouse over me</span>
+                    <div class="dropdown-content">
+                        <p>Hello World!</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
