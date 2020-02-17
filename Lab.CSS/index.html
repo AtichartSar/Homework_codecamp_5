@@ -57,17 +57,24 @@
             background-color: #111;
         }
 
+
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: #f9f9f9;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            padding: 12px 16px;
             z-index: 1;
         }
 
         .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
             display: block;
         }
     </style>
@@ -81,11 +88,17 @@
         </tr>
         <tr>
             <td><a target="black" href="https://www.bangkokpost.com/">www.ข่าว</a></td>
-            <td>เว็บข่าวมีการจัดเนื้อหาแบบทั้งคอลัมและแถว การใช้ display grid จึงเหมาสมที่สุด</td>
+            <td>เว็บข่าวมีการจัดเนื้อหาแบบทั้งคอลัมและแถว มีการแสดงเนื้อหาข่าวหลายส่วน
+                เพื่อง่ายต่อการเขียนและออกแบบเว็บการใช้ display grid จึงเหมาะสมที่สุด</td>
         </tr>
         <tr>
             <td><a href="https://portal.weloveshopping.com/" target="_blank">www.ชอปปิ้ง</a></td>
-            <td>เว็บชอปปิ้งมีการจัดเนื้อหาแสดงสินค้าแบบตาราง การรใช้ display flex จึงเหมาะสมที่สุด</td>
+            <td>เว็บชอปปิ้งมีการจัดเนื้อหาแสดงสินค้าแบบตาราง การใช้ display flex เพื่อแสดงสินค้า จึงเหมาะสมที่สุด</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.w3schools.com/" target="_blank">www.การเรียนการสอน</a></td>
+            <td>เว็บการเรียนการสอนมีการจัดวางส่วนแสดงเนื้อหาเป็นหัวข้อๆ การใช้ display flex flex-direction:column
+                จึงเหมาะสมที่สุด</td>
         </tr>
     </table><br>
     <table style=" width: 44%;margin: 0 auto;">
@@ -128,9 +141,11 @@
             <td>dropdown</td>
             <td>
                 <div class="dropdown">
-                    <span>Mouse over me</span>
+                    <button class="dropbtn">Dropdown</button>
                     <div class="dropdown-content">
-                        <p>Hello World!</p>
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
                     </div>
                 </div>
             </td>
