@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contanier {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(auto);
+            grid-gap: 5px;
+            text-align: center;
+        }
+        div > div {
+            padding: 5px;
+            border: 1px solid black;
+            
+        }
+        div > h3{
+            border: 1px solid black;
+            }
+        
+        @media only screen and (max-width: 550px) {
+
+            /* For mobile: */
+            .contanier {
+                grid-template-columns: repeat(auto);
+                min-width: 150px;
+            }
+
+            div>div {
+              
+                min-width: 500px;
+            }
+           
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            /* For tablets: */
+            .contanier {
+                grid-template-columns: repeat(2, auto);
+                
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            /* For desktop: */
+            .contanier {
+                grid-template-columns: repeat(3, auto);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div style="min-width: 80px;text-align: center; " >
+        <img src="https://www.hellomyweb.com/media/course/html.png.500x500_q85_crop.png" alt="">
+    </div>
+   
+    <div class="contanier">
+        
+        <div><h3>col1</h3><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident minima nemo veritatis. Eius adipisci consequuntur incidunt quia saepe molestias? Deserunt, tempora vel. Debitis sit vero dicta molestias modi. Porro, voluptas?</p></div>
+        <div><h3>col2</h3><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut et maiores, ea perspiciatis consequuntur iusto quibusdam cumque incidunt sit nobis impedit exercitationem, dolorum molestiae delectus voluptates? Similique enim incidunt magni?</p></div>
+        <div><h3>col3</h3><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet suscipit nam provident obcaecati ea reprehenderit ipsum fugiat porro molestias laboriosam totam, vel non soluta quisquam esse exercitationem consectetur delectus magnam.</p></div>
+    </div>
+</body>
+
+</html>

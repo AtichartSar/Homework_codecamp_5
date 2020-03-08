@@ -1,0 +1,206 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@AtichartSar 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+AtichartSar
+/
+study
+Private
+1
+00
+ Code Issues 1 Pull requests 0 Actions Projects 0 Security Insights Settings
+study/day3-4
+@AtichartSar AtichartSar Create day3-4
+47be731 4 days ago
+180 lines (164 sloc)  5.84 KB
+  
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>page review css</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        .inElement p {
+            background-color: yellow;
+        }
+
+        .child>p {
+            background-color: yellow;
+        }
+
+        .general~p {
+            background-color: yellow;
+        }
+
+        div .adjacent+p {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>
+                <h1>ถาม<h1>
+            </th>
+            <th>
+                <h1>ตอบ<h1>
+            </th>
+        </tr>
+        <tr>
+            <td>CSS syntax ประกอบด้วยอะไรบ้าง</td>
+            <td>
+                Selector{property:value}<br>
+                p {color: red;}
+            </td>
+        </tr>
+
+        <tr>
+            <td>การเขียน CSS มีกี่แบบอะไรบ้าง</td>
+            <td>
+                <ol>
+                    <li>Inline CSS เขียนในแทค style ใน head</li>
+                    <li>external CSS เขียนในไฟล.css</li>
+                    <li>internal CSS เขียนใน element</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>Selector มีกี่แบบอะไรบ้าง</td>
+            <td>
+                <ol>
+                    <li>Simple selectors id , class , element</li>
+                    <li>Combinator selectors </li>
+                    <li>Pseudo-class selectors</li>
+                    <li>Pseudo-elements selectors </li>
+                    <li>Attribute selectors </li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>combinator มีกี่แบบอะไรบ้าง</td>
+            <td>
+                <ol>
+                    <li>descendant selector (space)</li>
+                    <li>child selector (>)</li>
+                    <li>adjacent sibling selector (+)</li>
+                    <li>general sibling selector (~)</li>
+                </ol>
+            </td>
+        </tr>
+
+    </table>
+    <h1>Descendant Selector</h1>
+    <div class="inElement">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            <p>Paragraph 3 in the div.</p>
+        </section> <!-- not Child but Descendant -->
+        <p>Paragraph 4 in the div.</p>
+    </div>
+
+    <h1>child selector</h1>
+    <div class="child">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            <p>Paragraph 3 in the div.</p>
+        </section> <!-- not Child but Descendant -->
+        <p>Paragraph 4 in the div.</p>
+    </div>
+
+    <h1>general sibling selector </h1>
+    <p>Paragraph 1.</p>
+    <div class="general">
+        <p>Paragraph 2.</p>
+    </div>
+    <p>Paragraph 3.</p>
+    <code>Some code.</code>
+    <p>Paragraph 4.</p>
+
+    <h1>adjacent sibling selector </h1>
+    <div>
+        <div class="adjacent">
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+        </div>
+
+        <p>Paragraph 3. Not in a div.</p>
+        <p>Paragraph 4. Not in a div.</p>
+    </div>
+    <table>
+        <tr>
+            <th>
+                <h1>ถาม </h1>
+            </th>
+            <th>
+                <h1>ตอบ </h1>
+            </th>
+        </tr>
+        <tr>
+            <td>property และ value คืออะไรแตกต่างกันอย่างไร</td>
+            <td>property กำหนดคุณสมบัติของอิลิเม้น value กำหนดคุณสมบัตของ property</td>
+        </tr>
+        <tr>
+            <td>property ที่สอนใน precamp มีกี่กลุ่มอะไรบ้าง</td>
+            <td>
+                <ol>
+                    <li>Property for content : color , size , font , text, list-style-type, Height, Width, background</li>
+                    <li>property for border : border, table</li>
+                    <li>property for padding : padding (top right buttom left) </li>
+                    <li>property for margin : margin (top right buttom left)</li>
+                    <li>property for element : display, Height, Width, Position, Float, Align, Flex, Grid</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>value unit มีกี่ประเภทอะไรบ้าง แต่ละประเภทคืออะไร</td>
+          <td>
+            <ul> 
+              <li>Absolute lenghts</li> 
+              <ol>  
+                <li>cm เซนติเมตร</li> 
+                <li>mm มิลลิเมตร</li> 
+                <li>in นิ้ว</li> 
+                <li>px พิกเซล 1/96 นิ้ว</li> 
+                <li>pt พอยท์ 1/72 นิ้ว</li> 
+                <li>pc พิคาล 1/12 นิ้ว</li>
+              </ol>
+              <li>relative lenghts</li> 
+              <ol>  
+                <li>em เท่าขนาดฟอนต์ของ element</li> 
+                <li>ex เท่าความสูงของฟอนต์ของ element</li> 
+                <li>vh เปอร์เซ็นต์ความสูงหน้าจอ</li> 
+                <li>vw เปอร์เซ็นต์ความกว้างหน้าจอ</li> 
+                <li>vmin เปอร์เซ็นต์ของ view point ต่ำสุด</li> 
+                <li>vmax เปอร์เซ็นต์ของ view point สูงสุด</li>
+                <li>% เปอร์เซ็นต์ของ parent element</li>
+              </ol>
+              
+            
+            </ul>
+          </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
+
