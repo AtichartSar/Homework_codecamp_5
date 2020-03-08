@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #colors {
+            /* @keyframes duration | timing-function | delay | 
+iteration-count | direction | fill-mode | play-state | name */
+            animation: 5s ease 0.1s infinite alternate colors;
+        }
+        @keyframes colors {
+            0%{
+                background-color: lawngreen;
+            }
+            25%{
+                background-color: lightcoral;
+            }
+            50%{
+                background-color: lightskyblue;
+            }
+            75%{
+                background-color: lime;
+            }
+            100%{
+                background-color: mediumblue;
+            }
+        }
+        #show{
+            /* @keyframes duration | timing-function | delay | 
+iteration-count | direction | fill-mode | play-state | name */
+            animation: 5s ease 0.1s infinite alternate show;
+        }
+        @keyframes show {
+            0%{
+                opacity: 0;
+            }
+            25%{
+                opacity: 0.25;
+            }
+            50%{
+                opacity: 0.5;
+            }
+            75%{
+                opacity: 0.75;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        #position{
+            /* @keyframes duration | timing-function | delay | 
+iteration-count | direction | fill-mode | play-state | name */
+            animation: 5s ease-in 0.1s infinite alternate position;
+            position: relative;
+        }
+        @keyframes position {
+            0%{
+                
+                left: 0px;
+            }
+            25%{
+                
+                left: 25px;
+            }
+            50%{
+               
+                left: 50px;
+            }
+            75%{
+                
+                left: 75px;
+            }
+            100%{
+                
+                left: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="colors">colors</div>
+    <div id="show">show</div>
+    <div id="position">position</div>
+</body>
+
+</html>

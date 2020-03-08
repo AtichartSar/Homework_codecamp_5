@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #color {
+
+            animation-name: color;
+            animation-duration: 5s;
+
+        }
+
+        #width {
+            animation-delay: 3s;
+            /*delay 3 ก่อนแสดงอนิเมชั่น*/
+
+            animation-name: width;
+            animation-duration: 5s;
+        }
+
+        #border {
+
+            animation-name: borders;
+            animation-duration: 5s;
+        }
+
+        #backgroundcolor {
+            animation-name: backgroundcolor;
+            animation-duration: 5s;
+        }
+
+        #position {
+            animation-direction: alternate;
+            /*อนิเมชั่นแสดง เล่นไปข้างหน้า และย้อนกลับ*/
+            animation-iteration-count: infinite;
+            /* จำรวนการแสดงผลอนิเมชั่น infinete*/
+            animation-name: position;
+            animation-duration: 5s;
+            width: 50px;
+            position: relative;
+        }
+
+        #showandhide {
+            animation-name: showandhide;
+            animation-duration: 5s;
+        }
+
+        @keyframes color {
+            from {
+
+                color: green;
+            }
+
+            to {
+
+                color: red;
+
+            }
+        }
+
+        @keyframes width {
+            from {
+                border: 1px solid green;
+                width: 100px;
+                height: 100px;
+
+
+            }
+
+            to {
+                border: 1px solid green;
+                width: 200px;
+                height: 100px;
+            }
+        }
+
+        @keyframes borders {
+            from {
+                border: 1px solid green;
+                width: 100px;
+                height: 100px;
+            }
+
+            to {
+                border: 10px solid black;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @keyframes backgroundcolor {
+            from {
+                background-color: skyblue;
+                width: 100px;
+                height: 100px;
+
+
+            }
+
+            to {
+                background-color: gold;
+
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @keyframes position {
+            from {
+              
+                left: 10px;
+
+            }
+
+            to {
+          
+                left: 300px;
+            }
+        }
+
+        @keyframes showandhide {
+            from {
+                background-color: skyblue;
+                width: 100px;
+                height: 100px;
+                opacity: 1;
+
+            }
+
+            to {
+                background-color: rosybrown;
+
+                width: 100px;
+                height: 100px;
+                opacity: 0;
+            }
+        }
+
+        #nomal {
+            animation-direction: normal;
+            animation-name: normal;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            width: 50px;
+            position: relative;
+        }
+
+        @keyframes normal {
+            0% {
+               
+                left: 0px;
+            }
+
+            25% {
+             
+                left: 100px;
+            }
+
+            50% {
+           
+                left: 200px;
+            }
+
+            75% {
+      
+                left: 300px;
+            }
+
+            100% {
+                
+                left: 400px;
+            }
+
+        }
+        #reverse {
+            animation-direction: reverse;
+            animation-name: reverse;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            width: 50px;
+        }
+
+        @keyframes reverse {
+            0% {
+                position: relative;
+                left: 0px;
+            }
+
+            25% {
+                position: relative;
+                left: 100px;
+            }
+
+            50% {
+                position: relative;
+                left: 200px;
+            }
+
+            75% {
+                position: relative;
+                left: 300px;
+            }
+
+            100% {
+                position: relative;
+                left: 400px;
+            }
+            }
+        #alternate {
+            animation-direction: alternate;
+            animation-name: alternate;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            width: 50px;
+            background-color: lawngreen;
+        }
+
+        @keyframes alternate {
+            0% {
+                position: relative;
+                left: 0px;
+            }
+
+            25% {
+                position: relative;
+                left: 100px;
+            }
+
+            50% {
+                position: relative;
+                left: 200px;
+            }
+
+            75% {
+                position: relative;
+                left: 300px;
+            }
+
+            100% {
+                position: relative;
+                left: 400px;
+            }
+
+        }
+        #timing{
+            /* กำหนดช่วงความเร็วในแต่ละช่วง */
+            /* animation-timing-function: ease;  */
+            animation-timing-function: ease-in;
+            animation-name: timing;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            background-color: hotpink;
+            width: 50px;
+        }
+        @keyframes timing{
+            from{
+                position: relative;
+                left: 0;
+            }
+            to{
+                position: relative;
+                left: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="color">color</div>
+    <div id="width">width</div>
+    <div id="border">border</div>
+    <div id="backgroundcolor">backgroundcolor</div>
+    <div id="position">position</div>
+    <div id="showandhide">showandhide</div>
+    <h3 style="margin-top: 15px; margin-bottom: -5px;">Delay and direction</h3>
+    <hr>
+    <div id="nomal">nomal</div>
+    <div id="reverse">reverse</div>
+    <div id="alternate">alternate</div>
+    <h3 style="margin-top: 15px; margin-bottom: -5px;">Animation timeing function</h3>
+    <hr>
+    <div id="timing">timing</div>
+</body>
+
+</html>
+<!-- 
+กำหนดช่วงความเร็วในแต่ละช่วง 
+animation-timing-function: ease-in;
+ชื่อ animation
+animation-name: timing;
+ระยะเวลาระหว่างการแสดงผล
+animation-duration: 5s;
+การแสดงการเล่นอนิเมชั่น
+animation-direction: alternate;
+จำนวนกาารแสดงอนิเมชั่น
+animation-iteration-count: infinite; 
+-->
