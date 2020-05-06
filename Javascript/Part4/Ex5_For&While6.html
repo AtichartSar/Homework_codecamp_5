@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       let number = prompt("input your number playyer 1")
+       if(number<0||number>100)number=Math.floor(Math.random() * 100);   
+      
+        
+        while(true){
+            let number2 = prompt("input your number playyer 2") 
+            if(number==number2){alert("correct number");break;}
+            let message =(number2>number)?`Number 2 : ${number2} moreThan number`:`Number 2 : ${number2} lessthan number`
+            alert(message)
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
