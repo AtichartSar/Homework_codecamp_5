@@ -10,7 +10,7 @@
         let fruit = ["Apples", "Pear", "Orange"];
         let shoppingCart = fruit;
         shoppingCart.push("Banana")
-        console.log(fruit);
+        // console.log(fruit);
 
         //<===[ Ex2 ]===>
         // a 
@@ -38,27 +38,22 @@
 
         //<===[ Ex4 ]===>
         function getMaxSubSum(arr) {
-            let max = 0;
-            let sum = 0;
-            let d = 0;
+            
+        
+            let globalMax=0;
+            let numIndex = 0;
+            let maxSum=[arr[0]];
             //loop size
-            for(let i=0;i<arr.length;i++){
+            for(let i=1;i<arr.length;i++){
                 //loop all
-                for(let j=0;j<arr.length-i;j++){
-                    console.log(arr[j])
-                    //loop in size
-                    for(let k=j;k<i;k++){
-                       sum= sum +arr[k];
-                    } 
-                    if(max>sum)sum=max;
-                    sum=0;
-                }
+                maxSum[i]=Math.max(arr[i],maxSum[i-1]+arr[i])
+                globalMax=Math.max(globalMax,maxSum[i])
                 
             }
-            return max;
+            return globalMax;
            
         }
-
+        console.log(getMaxSubSum([1,2,-3,4,5]))
 
 
 
