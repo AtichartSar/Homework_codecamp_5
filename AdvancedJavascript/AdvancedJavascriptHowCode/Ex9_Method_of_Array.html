@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // <===[ Ex1 ]===>
+        // Ex1.1
+        function ex1(arr){
+            return arr.map(arr=>arr*2);
+        }
+        // Ex1.2
+        function ex2(arr){
+            return arr.map(arr=>arr.toString());
+        }
+        // Ex1.3
+        function ex3(arr){
+            return arr.map(arr=> typeof arr);
+        }
+        // Ex1.4
+        function ex4(arr){
+            return arr.map(arr=> arr.toUpperCase());
+        }
+        // Ex1.5
+        function ex5(arr){
+            return arr.map(arr=>arr.name)
+        }
+        // console.log(ex5([{name:"apple",age:14},{name:"banana",age:18},{name:"water",age:32}]))
+        // Ex1.6
+        function ex6(arr){
+            return arr.map(arr=>arr.age)
+        }
+        // console.log(ex6([{name:"apple",age:14},{name:"banana",age:18},{name:"water",age:32}]))
+        // Ex1.7
+        function ex7(arr){
+            return arr.map(arr=>arr.name+" "+arr.surname)
+        }
+        // console.log(ex7([{name:"apple",surname:"London"},{name:"banana",surname:"Bangkok"},{name:"water",surname:"Singapore"}]))
+        // Ex1.8
+        function ex8(arr){
+            return arr.map(arr=>arr%2==0?"odd":"even")
+        }
+        // console.log(ex8([1,2,3,4,5,6,7,8]))
+        // Ex1.9
+        function ex9(arr){
+            return arr.map(arr=>Math.abs(arr))
+        }
+        // console.log(ex9([1,-3,2,8,-4]))
+        // Ex1.10
+        function ex10(arr){
+            return arr.map(arr=>Number.parseFloat(arr).toFixed(2).toString())
+        }
+        // console.log(ex10([100,200.25,300.84,400.3]))
+
+        // <===[ Ex2 ]===>
+        // Ex2.1
+        function ex21(arr){
+            return arr.filter(arr=>arr>10);
+        }
+        // console.log(ex21([1,2,30,400]))
+        // Ex2.2
+        function ex22(arr){
+            return arr.filter(arr=>arr%2!=0);
+        }
+        // console.log(ex22([1,2,3,4]))
+        // Ex2.3
+        function ex23(arr){
+            return arr.filter(arr=>typeof arr === "number")
+        }
+        // console.log(ex23([1,"1",2,{}]))
+        // Ex2.4
+        function ex24(arr){
+            return arr.filter(arr=>arr.length>6)
+        }
+        // console.log(ex24(["apple","banana","orange","pineapple","watemeron"]))
+        // Ex2.5
+        function ex25(arr){
+            return arr.filter(arr=>arr.age<18)
+        }
+        // Ex2.6
+        function ex26(arr){
+            return arr.filter(arr=>arr.age!=32)
+        }
+        // Ex2.7
+        function ex27(arr){
+            return arr.filter(arr=>arr>0)
+        }
+        // Ex2.8
+        function ex28(arr){
+            return arr.filter(arr=>arr%3==0)
+        }
+        // Ex2.9
+        function ex29(arr){
+            return arr.filter(arr=>typeof arr === "string")
+        }
+        // Ex2.10
+        function ex210(arr){
+            return arr.filter(arr=>arr==arr.toUpperCase());
+        }
+        // console.log(ex210(["Apple","APPLE"]));
+        // Ex2.11
+        function ex211(arr){
+            return arr.filter(arr=>arr.birth.split("-")[1]=="10");
+        }
+        console.log(ex211([{name:"apple",birth:"2001-01-01"},
+        {name:"banana",birth:"1990-10-10"},
+        {name:"watermelon",birth:"2002-10-13"}]));
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

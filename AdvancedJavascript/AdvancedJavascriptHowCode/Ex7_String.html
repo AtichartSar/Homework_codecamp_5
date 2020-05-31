@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Ex1
+        function ucFirst(str) {
+
+            return str[0].toUpperCase() + str.substr(1);
+
+        }
+        console.log(ucFirst("hello"))
+
+        //Ex2
+        function checkSpam(str) {
+
+            if (str.includes("xxx")) return true;
+            if (str.includes("viagra")) return true;
+            return false;
+        }
+        console.log(checkSpam("df xxx"))
+
+        //Ex3
+        function truncate(str, max) {
+            let strP = ""
+            for (let i = 0; i < str.length; i++) {
+
+                if (i > (max - 1)) {
+                    strP += "..."
+                    break;
+                }
+                strP += str[i];
+
+            }
+            return strP;
+        }
+        console.log(truncate("What I'd like to tell on this topic is:", 20))
+
+        //Ex4
+        function extracCurrency(str,rate) {
+          let dollar =  Number(str.substr(1));
+          return dollar*Number(rate)
+           
+        }
+        console.log(extracCurrency("$120",30.5))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

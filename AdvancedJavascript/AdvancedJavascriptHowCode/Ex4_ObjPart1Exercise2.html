@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let key = prompt("Enter fruit's name: ")
+        let obj = {}
+
+        while (key !== "stop") {
+            let value=prompt(`Enter the number of ${key}`)
+            if(Number(value)>1){
+                key= key+"s"
+            }
+            obj[key]=value;
+             key=prompt("Enter fruit's name: ")
+        }
+        console.log(obj)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //<===[ Ex1 ]===>
+        let fruit = ["Apples", "Pear", "Orange"];
+        let shoppingCart = fruit;
+        shoppingCart.push("Banana")
+        console.log(fruit);
+
+        //<===[ Ex2 ]===>
+        // a 
+        let styles = ["Jazz", "Blue"]
+        // b
+        styles.push("Rock-n-Roll")
+        // c
+        styles[1] = "Classics"
+        // d
+        styles.shift()
+        // e
+        styles.unshift("Rap", "Reggae")
+
+        //<===[ Ex3 ]===>
+        function sumLnput() {
+            let array = []
+            while (true) {
+                let number = prompt("value ?")
+                notANumber = isNaN(number)
+                if (notANumber) break;
+                array.push(Number(number))
+            }
+            return array.reduce((total, num) => total + num);
+        }
+
+        //<===[ Ex4 ]===>
+        function getMaxSubSum(arr) {
+            let max = 0;
+            let sum = 0;
+            let d = 0;
+            //loop size
+            for(let i=0;i<arr.length;i++){
+                //loop all
+                for(let j=0;j<arr.length-i;j++){
+                    console.log(arr[j])
+                    //loop in size
+                    for(let k=j;k<i;k++){
+                       sum= sum +arr[k];
+                    } 
+                    if(max>sum)sum=max;
+                    sum=0;
+                }
+                
+            }
+            return max;
+           
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
