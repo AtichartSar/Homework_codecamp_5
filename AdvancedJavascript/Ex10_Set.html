@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Ex1
+        function unique(arr) {
+            return set = new Set(arr);
+        }
+        // console.log(unique(["hare","hare"]))
+        // Ex2
+        function anagram(arr) {
+            let re = [];
+            let anag = [];
+            let getindex;
+            let set = new Set();
+            for (let i = 0; i < arr.length; i++) {
+                re[i] = arr[i].toLowerCase().split("").sort().join("")
+                set.add(re[i])
+
+                if (set.size != i) {
+                    set = new Set();
+                    continue;
+                }
+                anag.push(arr[i])
+            }
+            console.log(anag)
+        }
+        // anagram(["nap", "Pan", "teacher", "ear", "era", "cheater"])
+        // Ex3
+        function mapF() {
+            let map = new Map();
+            map.set("name", "john")
+            let key = map.keys("name");
+            key.push("more")
+
+        }
+        // mapF();
+
+        //<===[ Keys Values Entries ]===>
+        let salaries = {
+            "john": 100,
+            "Pede": 300,
+            "Mary": 250
+        }
+        function sumSalaries(obj) {
+        
+           if(typeof obj ==="undefined"||Object.keys(obj)==0)return 0;
+            let sum=0;
+            Object.entries(obj).forEach(([key,value]) => {
+                
+                sum+=value
+            });
+            return sum;
+         
+        }
+        // console.log(sumSalaries())
+        let user = {
+            name:"john",
+            age:30
+        }
+        function countUser(obj){
+            let count =0;
+            Object.entries(obj).forEach((key,value)=>{
+                count++;
+            });
+            console.log(count)
+        }
+        countUser(user)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
