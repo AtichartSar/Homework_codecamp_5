@@ -38,6 +38,3 @@
 | content | *content* | content |
 
 
-
-    sasd
-    sassad
