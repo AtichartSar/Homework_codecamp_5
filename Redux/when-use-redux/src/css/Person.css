@@ -1,0 +1,11 @@
+.person{
+    width: 30%;
+    height: 100px;
+    box-shadow: 3px  3px  3px black;
+    border: 1px solid green;
+    margin: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
